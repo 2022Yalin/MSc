@@ -90,7 +90,7 @@ def basic_household_boiler_explicit( my_sim: Simulator, my_simulation_parameters
         my_simulation_parameters = SimulationParameters.full_year_all_options(year=year, seconds_per_timestep=seconds_per_timestep)
     my_sim.SimulationParameters = my_simulation_parameters
     # Build occupancy
-    my_occupancy = occupancy.Occupancy(profile=occupancy_profile, my_simulation_parameters=my_simulation_parameters)
+    my_occupancy = occupancy.Occupancy(profile_name=occupancy_profile, my_simulation_parameters=my_simulation_parameters)
     my_sim.add_component(my_occupancy)
 
     # Build Weather
